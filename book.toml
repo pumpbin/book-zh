@@ -1,0 +1,13 @@
+[book]
+authors = ["b1n <b1n@b1n.io>"]
+language = "zh"
+multilingual = false
+src = "src"
+title = "Chinese PumpBin Documentation"
+
+[output.html]
+default-theme = "macchiato"
+preferred-dark-theme = "macchiato"
+git-repository-url = "https://github.com/pumpbin/book-zh"
+edit-url-template = "https://github.com/pumpbin/book-zh/edit/main/{path}"
+additional-css = ["theme/catppuccin.css"]
