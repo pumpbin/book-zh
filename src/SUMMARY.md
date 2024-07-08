@@ -6,13 +6,14 @@ ______________________________________________________________________
 
 # Plugin Development
 
-- [Quick Start](devs/start.md)
-- [Encryption](devs/encrypt.md)
-- [Remote Type](devs/remote.md)
-- [Advanced](devs/advanced.md)
+- [Quick Start](dev/start.md)
+- [Encryption](dev/encrypt.md)
+- [Remote Type](dev/remote.md)
+- [Advanced](dev/advanced.md)
+  - [Extism Plug-in](dev/advanced/extism_plug-in.md)
 
 ______________________________________________________________________
 
 # User Manual
 
-- [Getting Started](users/start.md)
+- [Getting Started](user/start.md)
