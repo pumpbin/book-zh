@@ -2,9 +2,9 @@
 
 在这一章, 我们将制作一个`Local`类型的Plugin, 并理解PumpBin的工作原理.
 
-`Local`类型的Plugin, shellcode在最终植入物内部存放. 这种方式有一定的稳定性优势, 但是shellcode容易被提取分析, 从而导致内存扫描无法通过.
+`Local`类型的Plugin, shellcode在最终植入物内部存放. 这种方式有一定的稳定性优势, 但是shellcode容易被提取分析.
 
-PumpBin将读取shellcode文件, 并根据加密设置将加密的shellcode动态patch到二进制植入物模板内, 加密所使用的随机密码也会一同patch.
+PumpBin将读取shellcode文件, 并根据加密设置将加密后的shellcode动态patch到二进制植入物模板内, 加密所使用的随机密码也会一同patch.
 
 所以PumpBin本质上是一个二进制数据搜索替换工具, 这种实现方式要求预先在二进制植入物内放置占位数据, 一旦编译完成, 占位数据长度将不可更改.
 
@@ -87,9 +87,7 @@ Prefix填写`$$SHELLCODE$$`. (这是我们上面shellcode占位数据的`Prefix`
 
 MaxLen填写shellcode占位数据的总大小, 在这个例子中应该是 1024\*1024 + Prefix的大小 = 1048589. (单位是Bytes)
 
-Type保持选中`Local`, Size Holder填写`$$99999$$`. (这是我们上面用来标识shellcode长度的常量字符串引用, 你可以使用任何你喜欢的Size Holder, 规则同上)
-
-Encrypt Type保持None
+Type选择`Local`, Size Holder填写`$$99999$$`. (这是我们上面用来标识shellcode长度的常量字符串引用, 你可以使用任何你喜欢的Size Holder, 规则同上)
 
 Windows Exe选择我们上面编译好的二进制植入物模板. (也可以直接填写文件路径)
 
@@ -101,7 +99,6 @@ Windows Exe选择我们上面编译好的二进制植入物模板. (也可以直
 
 至此, 我们制作了一个`Local`类型的Plugin, 并理解了PumpBin的工作原理.
 
-下一章将介绍PumpBin中的加密系统, 你将不必再关心加密过程, 只需要知道每当你在Plugin列表中选择一个Plugin时, PumpBin将为你重新生成对应Plugin的随机加密密码.
-(如果你想要重新生成当前选中的Plugin的加密密码, 只需要再次点击Plugin列表中的当前选中插件)
+下一章将介绍PumpBin中的加密系统, 加密过程对用户透明, 由Plugin开发者决定, 由PumpBin处理.
 
 本例中的完整项目文件在PumpBin代码仓库的[examples/create_thread](https://github.com/pumpbin/pumpbin/blob/main/examples/create_thread/src/main.rs).
