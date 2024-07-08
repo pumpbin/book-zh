@@ -85,13 +85,13 @@ Plugin Name填写first_plugin. (这个字段是Plugin的唯一标识, 这意味�
 
 Prefix填写`$$SHELLCODE$$`. (这是我们上面shellcode占位数据的`Prefix`, 你可以使用任何你喜欢的`Prefix`, 只要确保它是唯一的, 或者是第一个被匹配的)
 
-MaxLen填写shellcode占位数据的总大小, 在这个例子中应该是 1024\*1024 + Prefix的大小 = 1048589. (单位是Bytes)
+Max Len填写shellcode占位数据的总大小, 在这个例子中应该是 1024\*1024 + Prefix的大小 = 1048589. (单位是Bytes)
 
-Type选择`Local`, Size Holder填写`$$99999$$`. (这是我们上面用来标识shellcode长度的常量字符串引用, 你可以使用任何你喜欢的Size Holder, 规则同上)
+Type选择`Local`, Size Holder填写`$$99999$$`. (这是我们上面用来确定shellcode长度的常量字符串引用, 你可以使用任何你喜欢的Size Holder, 规则同上)
 
 Windows Exe选择我们上面编译好的二进制植入物模板. (也可以直接填写文件路径)
 
-点击Generate, 保存生成的Plugin
+点击Generate, 保存生成的b1n文件
 
 ## 测试Plugin
 
