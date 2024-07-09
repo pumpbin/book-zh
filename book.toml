@@ -11,3 +11,7 @@ preferred-dark-theme = "macchiato"
 git-repository-url = "https://github.com/pumpbin/book-zh"
 edit-url-template = "https://github.com/pumpbin/book-zh/edit/main/{path}"
 additional-css = ["theme/catppuccin.css"]
+
+[output.html.playground]
+copy-js = false
+runnable = false
