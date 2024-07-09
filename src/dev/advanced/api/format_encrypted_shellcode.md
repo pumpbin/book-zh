@@ -1,1 +1,0 @@
-# format_encrypted_shellcode

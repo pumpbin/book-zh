@@ -37,9 +37,9 @@ pub fn extism_plugin(input: Vec<u8>) -> FnResult<Vec<u8>> {
 
 Extism官网有使用各种语言开发Plug-in的[详细教程](https://extism.org/docs/quickstart/plugin-quickstart), 下面是PumpBin Extism Plug-in的API文档.
 
-- [encrypt_shellcode](dev/advanced/api/encrypt_shellcode.md)
-- [format_encrypted_shellcode](dev/advanced/api/format_encrypted_shellcode.md)
-- [format_url_remote](dev/advanced/api/format_url_remote.md)
-- [upload_final_shellcode_remote](dev/advanced/api/upload_final_shellcode_remote.md)
+- [encrypt_shellcode](api/encrypt_shellcode.md)
+- [format_encrypted_shellcode](api/format_encrypted_shellcode.md)
+- [format_url_remote](api/format_url_remote.md)
+- [upload_final_shellcode_remote](api/upload_final_shellcode_remote.md)
 
 以remote结尾的是`Remote`类型Plugin特有的Extism Plug-in.
